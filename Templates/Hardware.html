@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block content %}
+<a href="javascript:history.back()" class="back-button">
+  <i class="fa fa-arrow-left"></i> Back
+</a>
+    <h1>{{ hardware_type }} at {{ office_name }}</h1>
+    <table>
+        <thead>
+            <tr>
+                {% for col in data.columns %}
+                    <th>{{ col }}</th>
+                {% endfor %}
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in data.itertuples(index=False) %}
+                <tr>
+                    {% for value in row %}
+                        <td>{{ value }}</td>
+                    {% endfor %}
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="search-section">
+  <form action="/search" method="get">
+    <input type="text" name="query" placeholder="Enter office name..." value="{{ query or '' }}" required>
+    <button type="submit"><i class="fa fa-search"></i> Search</button>
+  </form>
+</div>
+    {% if offices %}
+        <div class="card-grid">
+            {% for office in offices %}
+                <a class="office-card" href="{{ url_for('office_view', office_name=office) }}">
+                    {{ office }}
+                </a>
+            {% endfor %}
+        </div>
+    {% elif query %}
+        <p>No matching offices found for "<strong>{{ query }}</strong>".</p>
+    {% endif %}
+</div>
+{% endblock %}

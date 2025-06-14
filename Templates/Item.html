@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<a href="javascript:history.back()" class="back-button">
+  <i class="fa fa-arrow-left"></i> Back </a>
+<h2>{{ item }} in {{ office_name }}</h2>
+
+{% if hardware_list %}
+  <table class="hardware-table">
+    <thead>
+      <tr>
+        <th>Item</th>
+        <th>Serial No.</th>
+        <th>Date of Purchase</th>
+        <th>Make</th>
+        <th>Model</th>
+        <th>Remarks</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for hw in hardware_list %}
+      <tr>
+        <td>{{ hw['Item'] }}</td>
+        <td>{{ hw['Serial No.'] }}</td>
+        <td>{{ hw['Date of Purchase'] }}</td>
+        <td>{{ hw['Make'] }}</td>
+        <td>{{ hw['Model'] }}</td>
+        <td>{{ hw['Remarks'] }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% else %}
+  <p>No hardware details found for {{ item }} in {{ office_name }}.</p>
+{% endif %}
+
+{% endblock %}

@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+  <title>{{ category }} – {{ office }}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>{{ category }} in {{ office }}</h1>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Serial No.</th>
+          <th>Date of Purchase</th>
+          <th>Make</th>
+          <th>Model</th>
+          <th>Remarks</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for item in items %}
+          <tr>
+            <td>{{ item["Serial No."] }}</td>
+            <td>{{ item["Date of Purchase"] }}</td>
+            <td>{{ item["Make"] }}</td>
+            <td>{{ item["Model"] }}</td>
+            <td>{{ item["Remarks"] }}</td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+
+    <a href="{{ url_for('office_view', office_name=office) }}" class="back">← Back to {{ office }}</a>
+  </div>
+</body>
+</html>
+<footer style="text-align:center; margin-top:2rem; font-size:0.9rem; color:#666;">
+  Created by R Devasivan, OA, Technology, Kottayam Division
+</footer>

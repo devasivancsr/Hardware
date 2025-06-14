@@ -1,0 +1,332 @@
+body {
+  font-family: 'Segoe UI', 'Roboto', sans-serif;
+  background-color: #f8f9fa;
+  color: #212121;
+}
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f5f5;
+}
+
+/* Top white banner */
+.top-banner {
+    background-color: white;
+    color: black;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid #ccc;
+}
+
+/* Yellow strip */
+.yellow-strip {
+    background-color: #fdd835;
+    height: 10px;
+}
+
+/* Logo image */
+.logo {
+    height: 60px;
+    margin-right: 15px;
+}
+
+/* Banner text */
+.banner-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.main-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #000;
+}
+
+.sub-title {
+    font-size: 16px;
+    font-weight: bold;
+    color: #000;
+}
+
+/* Content container */
+.container {
+    padding: 20px;
+}
+
+/* Headings */
+h1, h2 {
+    color: #b71c1c;
+    margin-top: 0;
+}
+
+/* Search bar */
+form {
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    padding: 10px;
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #b71c1c;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #9a0007;
+}
+
+/* Office cards */
+.office-list a {
+    display: block;
+    background-color: #ffe082;
+    padding: 15px;
+    margin-bottom: 10px;
+    text-decoration: none;
+    color: #000;
+    border-radius: 10px;
+    font-weight: bold;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+}
+
+.office-list a:hover {
+    transform: scale(1.02);
+}
+
+/* Hardware item cards */
+.hardware-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 20px;
+    justify-content: flex-start;
+}
+
+.card {
+    background-color: #fdd835; /* bright yellow */
+    /* ... existing styles ... */
+    text-transform: capitalize;
+    border-radius: 12px;
+    font-size: 1.2rem;
+    min-width: 180px;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;   /* removes underline */
+    color: black;            /* black text */
+    font-weight: bold;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+    width: 200px;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    background-color: #fff176;
+}
+
+/* Color rotation for hardware cards */
+.card:nth-child(4n+1) {
+  background: linear-gradient(to bottom right, #ffcc80, #ffb74d);
+}
+.card:nth-child(4n+2) {
+  background: linear-gradient(to bottom right, #a5d6a7, #66bb6a);
+}
+.card:nth-child(4n+3) {
+  background: linear-gradient(to bottom right, #90caf9, #42a5f5);
+}
+.card:nth-child(4n) {
+  background: linear-gradient(to bottom right, #ce93d8, #ab47bc);
+}
+
+
+/* Table styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+th, td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #efefef;
+    font-weight: bold;
+}
+
+tr:hover {
+    background-color: #f9f9f9;
+}
+
+.back-button {
+  display: inline-block;
+  background-color: #e60000;  /* India Post red */
+  color: black;
+  padding: 6px 14px;
+  border-radius: 25px;
+  font-weight: bold;
+  text-decoration: none;
+  margin-bottom: 20px;
+  transition: background-color 0.2s ease;
+}
+
+.back-button:hover {
+  background-color: #cc0000;
+}
+
+.hardware-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background-color: #fff8dc; /* light yellow */
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+
+.hardware-table th {
+  background-color: #ffcc00; /* India Post yellow */
+  color: black;
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.hardware-table td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  background-color: #ffffff;
+}
+
+.hardware-table tr:nth-child(even) td {
+  background-color: #fff4b3;
+}
+
+/* --------------------- */
+/* ADDED ENHANCEMENTS BELOW */
+/* --------------------- */
+
+/* Use Department of Posts font (Noto Sans) */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+
+body {
+    font-family: 'Noto Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Enhanced back button with arrow */
+.back-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(45deg, #b71c1c, #e53935);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 16px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.back-button i {
+  font-size: 18px;
+}
+
+.back-button:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(45deg, #c62828, #f44336);
+}
+
+
+/* Bigger card size override */
+.card {
+    min-width: 220px;
+    width: 240px;
+    padding: 25px 20px;
+    font-size: 1.3rem;
+}
+
+/* Optional: Adjust spacing */
+.card::before {
+    font-size: 24px;
+    display: block;
+    margin-bottom: 8px;
+}
+
+/* Override background color */
+.card:nth-child(4n+1) { background-color: #ffd600; } /* Yellow */
+.card:nth-child(4n+2) { background-color: #00c853; } /* Green */
+.card:nth-child(4n+3) { background-color: #29b6f6; } /* Light Blue */
+.card:nth-child(4n)   { background-color: #ff7043; } /* Orange */
+
+.card i {
+    font-size: 28px;
+    margin-bottom: 8px;
+    display: block;
+    color: white;
+}
+
+.search-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40vh;
+  margin-bottom: 30px;
+}
+
+form {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  background: white;
+  padding: 20px 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+input[type="text"] {
+  padding: 12px 16px;
+  font-size: 16px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  width: 300px;
+}
+
+button {
+  background-color: #b71c1c;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 6px;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+button i {
+  font-size: 16px;
+}

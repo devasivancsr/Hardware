@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block content %}
+<a href="javascript:history.back()" class="back-button">
+  <i class="fa fa-arrow-left"></i> Back </a>
+{% set icons = {
+    'monitor': 'fa-desktop',
+    'printer': 'fa-print',
+    'barcode scanner': 'fa-barcode',
+    'keyboard': 'fa-keyboard',
+    'mouse': 'fa-mouse',
+    'cpu': 'fa-microchip',
+    'ups': 'fa-plug',
+    'modem': 'fa-wifi',
+    'router': 'fa-network-wired',
+    'laptop': 'fa-laptop',
+    'webcam': 'fa-video',
+    'scanner': 'fa-copy'
+} %}
+</a>
+    <h1>{{ office_name }}</h1>
+    <h2>Select Hardware Type</h2>
+<div class="card-container">
+  {% for hardware in hardware_types %}
+    {% set hw_lower = hardware.lower() %}
+    {% set icon = icons.get(hw_lower, 'fa-cube') %}
+    <a class="card" href="{{ url_for('item_view', office_name=office_name, item=hardware) }}">
+      <i class="fa {{ icon }} card-icon"></i><br>
+      {{ hardware.title() }}
+    </a>
+  {% endfor %}
+</div>
+{% endblock %}
